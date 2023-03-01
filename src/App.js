@@ -1,7 +1,25 @@
-import logo from './logo.svg';
+import About from "./components/About";
+import Homepage from "./components/Homepage";
 import './App.css';
 
+import { Link, Route, Routes } from "react-router-dom";
+
+
 function App() {
+  return (
+    <div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
+  )
 }
+
+
 
 export default App;
