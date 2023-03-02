@@ -1,5 +1,3 @@
-import { UseContext } from "react";
-import MealContext from "../DataContext";
 
 function Homepage() {
   return (
