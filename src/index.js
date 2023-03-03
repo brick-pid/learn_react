@@ -10,7 +10,6 @@ import App from './App';
 // 用 ReactDOM.render() 方法渲染 App 组件，将其挂载到 id 为 root 的 DOM 元素上
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // 严格模式会影响useEffect的执行时机，先去掉
       <App />
-  </React.StrictMode>
 );
