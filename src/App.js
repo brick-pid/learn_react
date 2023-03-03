@@ -8,7 +8,7 @@ const songs = [
 function SongList() {
   return (
     <ul>
-      { songs.map(song => <li> { song.name} </li>)}
+      { songs.map(song => <li key={song.id}> { song.name} </li>)} 
     </ul>
   )
 }
