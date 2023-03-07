@@ -36,13 +36,16 @@ function Meals () {
 
   return (
     <div>
-      {meals.map(item =>
+      {meals && meals.map(item =>
         <DisplayMeals
           key={item.id}
           name={item.name}
           description={item.description}
           id={item.id}
-          deleteItemHandler={deleteItemHandler} />)}
+          deleteItemHandler={deleteItemHandler} >
+          I am a child!
+        </DisplayMeals>)
+      }
     </div>
   )
 }
@@ -50,10 +53,13 @@ function Meals () {
 
 function DisplayMeals (props) {
   console.log(props)
+  const { name, description } = props
   return (
     <div>
-      <div>{props.name}</div>
-      <div>{props.description}</div>
+      <div style={{ color: 'red' }}>{props.id}</div>
+      <div>{name}</div>
+      <div>{description}</div>
+      <div>{props.children}</div>
       <button onClick={() => props.deleteItemHandler(props.id)}>Delete</button>
     </div>
   )
