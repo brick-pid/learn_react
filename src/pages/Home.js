@@ -1,12 +1,15 @@
-import { Button } from "antd"
+import { Row, Col } from "antd"
 
+import Visulization from "./Visulization"
 
 
 function Home () {
   return (
     <div>
-      <h1>Home</h1>
-      <Button type="primary"> Antd Button</Button>
+      <div>
+        <Visulization />
+      </div>
+
     </div>
   )
 }
